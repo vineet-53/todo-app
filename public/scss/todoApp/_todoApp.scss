@@ -1,0 +1,26 @@
+@use "../utility/" as *;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.todo {
+  width: 37.5rem;
+  height: 100%;
+  font-family: $ff-pop;
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .display {
+    margin-block-start: 0.5rem;
+    & input[type="checkbox"] {
+      width: 1rem;
+    }
+    & .date {
+      font-size: 0.8rem;
+    }
+  }
+}

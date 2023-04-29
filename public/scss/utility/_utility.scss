@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Sigmar&display=swap");
+$fs-100: 1.5rem;
+$fs-200: 2rem;
+$fs-300: 2.5rem;
+$fs-400: 3rem;
+$fs-500: 3.5rem;
+$fs-600: 4rem;
+$fs-700: 4.5rem;
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$ff-pop: "Poppins", sans-serif;
+$btn-danger: hsl(0, 74%, 56%);
+$btn-dark: hsl(0, 8%, 20%);
+//
+input[type="text"],
+button {
+  all: unset;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.td-none {
+  text-decoration: none;
+}
+.btn {
+  padding: 0.3rem 0.6rem;
+  border: 0.01rem solid hsl(0, 2%, 75%);
+  border-radius: 0.1rem;
+  color: white;
+  background-color: hsl(60, 81%, 43%);
+  margin: 0.1em 0.2rem;
+}
+.btn-dark {
+  background-color: $btn-dark;
+}
+.btn-danger {
+  background-color: $btn-danger;
+}
+.btn-blue {
+  background-color: blue;
+}
+input[type="text"],
+input[type="date"],
+input,
+select {
+  cursor: pointer;
+  font-family: $ff-pop;
+  border: 0.01rem solid hsl(0, 2%, 75%);
+  border-radius: 0.2rem;
+  padding: 0.6rem 0.9rem;
+  outline-offset: 0.1rem;
+  outline-color: hsl(0, 2%, 75%);
+  box-shadow: -0.125rem 0.0625rem 5px 0.0625rem lightgrey;
+}
+.b-top {
+  border-top: 0.08rem solid hsl(0, 2%, 75%);
+}
+.b-right {
+  border-right: 0.08rem solid hsl(0, 2%, 75%);
+}
+.b-left {
+  border-left: 0.08rem solid hsl(0, 2%, 75%);
+}
+.b-bottom {
+  border-bottom: 0.08rem solid hsl(0, 2%, 75%);
+}
+.py-2 {
+  padding-block: 1rem;
+}
+.py-3 {
+  padding-block: 1.5rem;
+}
+.px-3 {
+  padding-block: 1.5rem;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-item {
+  align-items: center;
+}
+.ta-center {
+  text-align: center;
+}
+h1 {
+  font-weight: $fw-700;
+}
+.pointer {
+  cursor: pointer;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap {
+  gap: 0.5rem;
+}

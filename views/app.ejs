@@ -1,0 +1,69 @@
+<main id="App" class="todo">
+  <h1 class="todo__title ta-center">TODO App</h1>
+  <form
+    action="/add-todo"
+    method="post"
+    data-create-new-todo-form
+    class="todo__form gap-1"
+  >
+    <div class="form__primary py-2 b-top">
+      <div class="flex-col">
+        <label for="desc">Description</label>
+        <input
+          type="text"
+          name="desc"
+          id="todo-desc"
+          placeholder="What do you need to do ?"
+          required
+        />
+      </div>
+    </div>
+    <div class="form__secondary flex gap-2 b-top py-2">
+      <div class="flex-col">
+        <label for="category">Category</label>
+        <select name="category" id="todo-category">
+          <option value="other" default>Other</option>
+          <option value="school">school</option>
+          <option value="work">work</option>
+          <option value="gym">gym</option>
+          <option value="health">outdoor</option>
+        </select>
+      </div>
+      <div class="flex-col">
+        <label for="date">date</label>
+        <input type="date" name="date" required placeholder="" />
+      </div>
+    </div>
+    <div class="button__container py-2 flex gap-2 b-top">
+      <button type="submit" class="btn btn-dark td-none pointer">
+        <i class="fa-sharp fa-solid fa-plus"></i> <span> Add Task</span>
+      </button>
+      <a href="/delete-todo" class="btn btn-danger td-none pointer">
+        <i class="fa-sharp fa-solid fa-trash"></i> <span> Delete Task</span>
+      </a>
+    </div>
+  </form>
+
+  <div id="display" class="display">
+    <% for( let obj of todo_list ) { %>
+    <div class="b-top py-3 px-3 flex justify-between align-item">
+      <div class="flex-col gap">
+        <div>
+          <a href="" data-todo-check-target
+            ><input
+              type="checkbox"
+              name="<%= obj._id %>"
+              style="display: inline-block"
+              data-checkedState="<%= obj.checkedState %>"
+              data-id="<%= obj._id %>"
+              class="px-3"
+          /></a>
+          <label for="<%= obj._id %>"><%= obj.todoName %></label>
+        </div>
+        <div class="date"><%= obj.date %></div>
+      </div>
+      <div><button class="btn td-none"><%= obj.category %></button></div>
+    </div>
+    <% } %>
+  </div>
+</main>
